@@ -1,0 +1,63 @@
+🔍 Let’s Understand the Code Step-by-Step
+
+🔹 def churn_chatbot(model, all_features):
+This is how we define a function in Python.
+
+churn_chatbot is the name we gave to our assistant.
+
+model is your trained AI brain (the machine learning model).
+
+all_features is the list of all columns the model expects when making predictions.
+
+1. 🗣️ The Welcome Message
+print("👋 Hello! I'm your Telecom Assistant Bot.")
+print("Let's check if you're at risk of leaving us 😢 or happily staying 😄")
+print("Please answer the following questions:")
+
+
+2. 🧾 Taking Inputs From User
+
+📌 Each of these lines asks the user a question and stores the answer:
+
+strip() removes any extra spaces the user might enter.
+
+int() changes the answer to a number.
+
+float() is used for decimal numbers like ₹650.50.
+
+3. 🧠 Convert Answers to AI Format (Model-Ready)
+
+ML models don’t understand words like "Male", "Credit Card", etc.
+So, we manually convert them to numbers (like 0 or 1). This is called One-Hot Encoding.
+
+4. 🧩 Making Sure All Features Are Present
+
+✨ This part makes sure that:
+
+Every column the model expects is included.
+
+If the user didn’t enter something, we fill it with a 0.
+
+Think of it like creating a checklist for the model — every item must be ticked ✅
+
+5. 🔮 Predict Using the Model
+
+💡 This is where the model says:
+
+1 or "Churn": User might leave.
+
+0 or "Stay": User is happy and will likely stay.
+
+🎙️ Show Chatbot Response
+
+
+6. 🧠 TL;DR – What Just Happened?
+Chatbot talks to user 🗣
+
+User gives their info 📝
+
+Chatbot prepares that info in the language the model understands 📊
+
+Model makes a prediction 🎯
+
+Chatbot shows the result 🔮
